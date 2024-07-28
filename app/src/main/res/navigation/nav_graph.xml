@@ -18,5 +18,14 @@
         android:id="@+id/message_Fragment"
         android:name="com.sample.kotln05.Message_Fragment"
         android:label="fragment_message"
-        tools:layout="@layout/fragment_message" />
+        tools:layout="@layout/fragment_message" >
+        <action
+            android:id="@+id/action_message_Fragment_to_secret_Message_Fragment"
+            app:destination="@id/secret_Message_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secret_Message_Fragment"
+        android:name="com.sample.kotln05.Secret_Message_Fragment"
+        android:label="fragment_secret__message"
+        tools:layout="@layout/fragment_secret_message" />
 </navigation>

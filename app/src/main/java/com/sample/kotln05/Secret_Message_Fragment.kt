@@ -34,7 +34,7 @@ class Secret_Message_Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_secret__message, container, false)
+        return inflater.inflate(R.layout.fragment_secret_message, container, false)
     }
 
     companion object {

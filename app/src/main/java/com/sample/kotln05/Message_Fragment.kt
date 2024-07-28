@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,7 +35,15 @@ class Message_Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_message, container, false)
+        val view = inflater.inflate(R.layout.fragment_message, container, false)
+
+        view.findViewById<View>(R.id.btnNext)
+            .setOnClickListener {
+                view.findNavController()
+                    .navigate(R.id.action_message_Fragment_to_secret_Message_Fragment)
+            }
+
+        return  view
     }
 
     companion object {
