@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -36,16 +37,17 @@ android {
 }
 
 dependencies {
-    val nav_version = "2.7.7"
+    val navVersion = "2.7.7"
 
     // Java language implementation
     //implementation("androidx.navigation:navigation-fragment:$nav_version")
     //implementation("androidx.navigation:navigation-ui:$nav_version")
 
     // Kotlin
-    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
-    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
-
+    implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
+    implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
+    // Safe Arguments
+    classpath("androidx.navigation:navigation-safe-args-gradle-plugin:$navVersion")
     // Feature module Support
     //implementation("androidx.navigation:navigation-dynamic-features-fragment:$nav_version")
 
