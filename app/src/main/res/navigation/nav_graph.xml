@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inboxFragment">
+
+    <fragment
+        android:id="@+id/inboxFragment"
+        android:name="com.sample.ktln05.InboxFragment"
+        android:label="Inbox"
+        tools:layout="@layout/fragment_inbox" />
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.sample.ktln05.HelpFragment"
+        android:label="Help"
+        tools:layout="@layout/fragment_help" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.sample.ktln05.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/sentItemsFragment"
+        android:name="com.sample.ktln05.SentItemsFragment"
+        android:label="Sent Items"
+        tools:layout="@layout/fragment_sent_items" />
+</navigation>
